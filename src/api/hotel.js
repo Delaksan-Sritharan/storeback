@@ -1,8 +1,6 @@
 import express from "express";
-import { getAllHotels, createHotel, getHotelById, updateHotel, patchHotel, deleteHotel } from "../application/hotel";
+import { getAllHotels, createHotel, getHotelById, updateHotel, patchHotel, deleteHotel } from "../application/hotel.js";
 const hotelsRouter = express.Router();
-
-
 
 hotelsRouter
     .route("/")

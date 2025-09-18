@@ -1,5 +1,6 @@
 import express from "express";
 import hotelsRouter from "./api/hotel.js";
+import connectDB from "./infrastructure/db.js";
 
 const app = express();
 
