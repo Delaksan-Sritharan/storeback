@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
-
     try {
         const MONGODB_URL = process.env.MONGODB_URL;
         if (!MONGODB_URL) {
@@ -13,6 +12,6 @@ const connectDB = async () => {
         console.error("Error connecting to MongoDB:", error.message);
         process.exit(1);
     }
-}
+};
 
 export default connectDB;
