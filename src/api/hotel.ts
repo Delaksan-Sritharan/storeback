@@ -26,7 +26,7 @@ hotelsRouter
 
 hotelsRouter
   .route("/:_id")
-  .get(isAuthenticated, getHotelById)
+  .get(getHotelById)
   .put(updateHotel)
   .patch(patchHotel)
   .delete(deleteHotel);
