@@ -21,7 +21,6 @@ app.use(
   })
 );
 app.use(clerkMiddleware()); // Reads the JWT from the request and sets the auth object on the request
-
 // app.use((req, res, next) => {
 //   console.log(req.method, req.url);
 //   next();

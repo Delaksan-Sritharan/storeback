@@ -12,6 +12,7 @@ import {
 import isAuthenticated from "./middleware/authentication-middleware";
 import isAdmin from "./middleware/authorization-middleware";
 
+
 const hotelsRouter = express.Router();
 
 const preMiddleware = (req: Request, res: Response, next: NextFunction) => {
@@ -22,7 +23,9 @@ const preMiddleware = (req: Request, res: Response, next: NextFunction) => {
 hotelsRouter
   .route("/")
   .get(getAllHotels)
-  .post(isAuthenticated, isAdmin, createHotel);
+  .post(createHotel);
+    // .post(isAuthenticated, isAdmin, createHotel);
+
 
 hotelsRouter
   .route("/:_id")

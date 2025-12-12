@@ -26,6 +26,7 @@ export const createHotel = async (
   res: Response,
   next: NextFunction
 ) => {
+  console.log("CREATE_HOTEL_REQUEST_BODY", req.body);
   try {
     const hotelData = req.body;
     const result = CreateHotelDTO.safeParse(hotelData);
