@@ -1,5 +1,6 @@
 import express from "express";
 import { Request, Response, NextFunction } from "express";
+import { respondToAIQuery } from "../application/ai";
 
 import {
   getAllHotels,
@@ -26,7 +27,10 @@ hotelsRouter
   .post(createHotel);
     // .post(isAuthenticated, isAdmin, createHotel);
 
-
+hotelsRouter
+  .route("/ai")
+  .post(respondToAIQuery);
+  
 hotelsRouter
   .route("/:_id")
   .get(getHotelById)
